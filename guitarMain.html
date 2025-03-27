@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guitar Tuner Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="app-header">
+        <h1 class="app-title">
+            <i class="fa-solid fa-guitar logo-icon"></i>
+            Guitar Tuner Pro
+        </h1>
+        
+        <nav class="tab-navigation">
+            <div class="tab active">
+                <i class="fa-solid fa-sliders"></i>
+                Tuning
+            </div>
+            <div class="tab">
+                <i class="fa-solid fa-music"></i>
+                Create your own tabs
+            </div>
+        </nav>
+    </header>
+    
+    <div class="app-container">
+        <div class="main-content">
+            <div class="tuner-container">
+                <div class="guitar-visualizer">
+                    <!-- 3D Fretboard design -->
+                    <div class="fretboard-container">
+                        <div class="fretboard-3d">
+                            <!-- Frets -->
+                            <div class="fret fret-1"></div>
+                            <div class="fret fret-2"></div>
+                            <div class="fret fret-3"></div>
+                            <div class="fret fret-4"></div>
+                            <div class="fret fret-5"></div>
+                            <div class="fret fret-6"></div>
+                            <div class="fret fret-7"></div>
+                            <div class="fret fret-8"></div>
+                            <div class="fret fret-9"></div>
+                            
+                            <!-- Strings -->
+                            <div class="guitar-string string-1"></div>
+                            <div class="guitar-string string-2"></div>
+                            <div class="guitar-string string-3"></div>
+                            <div class="guitar-string string-4"></div>
+                            <div class="guitar-string string-5"></div>
+                            <div class="guitar-string string-6"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Note circles for tuning (at the bottom) -->
+                    <div class="tuning-circles">
+                        <div class="note-circle" data-string="0">E</div>
+                        <div class="note-circle" data-string="1">A</div>
+                        <div class="note-circle" data-string="2">D</div>
+                        <div class="note-circle" data-string="3">G</div>
+                        <div class="note-circle" data-string="4">B</div>
+                        <div class="note-circle" data-string="5">E</div>
+                    </div>
+                    
+                    <!-- Completion popup message -->
+                    <div class="tuning-complete">
+                        <p>Your guitar is perfectly tuned! 🎸</p>
+                    </div>
+                </div>
+
+                <div class="tuner-controls-panel">
+                    <div class="tuner-controls">
+                        <div class="tuning-selector">
+                            <select id="tuning-select">
+                                <option value="standard">Standard (E A D G B E)</option>
+                                <option value="drop_d">Drop D (D A D G B E)</option>
+                                <option value="open_g">Open G (D G D G B D)</option>
+                                <option value="open_d">Open D (D A D F# A D)</option>
+                                <option value="dadgad">DADGAD</option>
+                                <option value="eb_standard">Eb Standard (Eb Ab Db Gb Bb Eb)</option>
+                            </select>
+                            <span class="dropdown-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                        </div>
+                        <button id="mic-toggle" class="mic-button">
+                            <i class="fa-solid fa-microphone"></i> Start Listening
+                        </button>
+                    </div>
+
+                    <div class="pitch-detector">
+                        <div class="pitch-info">
+                            <span id="detected-note">--</span>
+                            <span id="detected-freq">-- Hz</span>
+                        </div>
+                        <div class="tuning-indicator">
+                            <div class="indicator-bar">
+                                <div id="indicator-needle"></div>
+                            </div>
+                            <div class="indicator-labels">
+                                <span><i class="fa-solid fa-arrow-down"></i> Flat</span>
+                                <span>In Tune</span>
+                                <span>Sharp <i class="fa-solid fa-arrow-up"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <footer>
+                        <p id="status-message">Ready to tune your guitar</p>
+                        <button id="reset-tuning" class="reset-button">
+                            <i class="fa-solid fa-rotate-right"></i> Reset Tuning
+                        </button>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="guitar.js"></script>
+</body>
+</html>
