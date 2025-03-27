@@ -69,4 +69,4 @@ MIT License - Feel free to use, modify, and distribute as you wish!
 Created by Bowie Ramirez
 
 Icons provided by [Font Awesome](https://fontawesome.com/)
-Fonts from [Google Fonts](https://fonts.google.com/) 
+Fonts from [Google Fonts](https://fonts.google.com/)
